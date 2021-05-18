@@ -40,6 +40,7 @@ body {
     color: #42515f;
 }
 
+
 * {
     box-sizing: border-box;
 }
@@ -213,7 +214,6 @@ select {
 
 error-output {
     font-size: 18px;
-    font-style: italic;
     color: red;
-    padding-left: 12px;
+    margin-left: 12px;
 }
