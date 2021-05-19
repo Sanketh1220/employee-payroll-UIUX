@@ -19,8 +19,8 @@ class EmployeePayroll {
      * Checking for regex before inserting or setting values
      */
     set name( name) {
-        let namgeRegex = RegExp('^[A-Z]{1}[a-zA-Z\\s]{2,}$');
-        if (namgeRegex.test(name)) {
+        let nameRegex = RegExp('^[A-Z]{1}[a-zA-Z\\s]{2,}$');
+        if (nameRegex.test(name)) {
             this._name = name;
         } else throw "Name is Incorrect!";
     }
@@ -79,10 +79,10 @@ class EmployeePayroll {
      */
     toString() {
         const options = {year: 'numeric', month: 'long', day: 'numeric'};
-        const empDate = !this.startDate ? 'undefined': this.startDate.toLocaleDateString('en-Us', options);
-        return "id=" + this.id + ", name=" + this.name + ", gender=" + this.gender + " ,profilePic=" + this.profilePic 
-            + " ,departments=" + this.department + " ,salary=" + this.salary 
-            + " ,startDate=" + empDate + " ,note=" + this.note;
+        const empDate = !this.startDate ? 'undefined': this.startDate.toLocaleDateString('en-US', options);
+        return "id=" + this._id + ", name=" + this._name + ", gender=" + this._gender + " ,profilePic=" + this._profilePic 
+            + " ,departments=" + this._department + " ,salary=" + this._salary 
+            + " ,startDate=" + empDate + " ,note=" + this._note;
     }    
 
 }
