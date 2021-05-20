@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const text = document.querySelector('#name');
     const textError = document.querySelector('.text-error');
     text.addEventListener('input', function () {
-        if (name.value.length == 0) {
+        if (text.value.length == 0) {
             textError.textContent == "";
             return;
         }
@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
 
     const salary = document.querySelector("#salary");
-    const output = document.querySelector(".salary-output");
+    const output = document.querySelector("#salary-output");
     output.textContent = salary.value;
     salary.addEventListener('input', function () {
         output.textContent = salary.value;
@@ -66,7 +66,7 @@ const createEmployeePayroll = () => {
 
     employeePayrollData.profilePic = getSelectedValues('[name=profile]').pop();
     employeePayrollData.gender = getSelectedValues('[name=gender]').pop();
-    employeePayrollData.department = getSelectedValues('[name=department]').pop();
+    employeePayrollData.department = getSelectedValues('[name=department]');
     employeePayrollData.salary = getInputValueById('#salary');
     employeePayrollData.note = getInputValueById('#notes');
     let date = 
@@ -75,7 +75,7 @@ const createEmployeePayroll = () => {
         getInputValueById('#month') + 
         "-" + 
         getInputValueById('#year');
-    employeePayrollData.startDate = new Date (date);
+    employeePayrollData.startDate = new Date(date);
     alert(employeePayrollData.toString());
     return employeePayrollData;
 }
@@ -84,8 +84,8 @@ const getSelectedValues = (propertyValue) => {
     let allItems = document.querySelectorAll(propertyValue);
     let selItems = [];
     allItems.forEach(item => {
-        if (item.checked) {
-            selItems.push(item.value);
+        if (item.checked) { //if(HR==checked)
+            selItems.push(item.value); //[].push(HR) => [HR, Sales]
         }
     });
     return selItems;
@@ -97,7 +97,8 @@ const getSelectedValues = (propertyValue) => {
  * @returns 
  */
 const getInputValueById = (id) => {
-    let value = document.querySelector(id).value;
+    let element = document.querySelector(id);
+    let value = element.value;
     return value;
 }
 
@@ -119,7 +120,7 @@ const resetForm = () => {
     setValue('#notes', '');
     setValue('#day', '1');
     setValue('#month', 'January');
-    setValue('#year', '2020');
+    setValue('#year', '2021');
     setTextValue('#salary-output', "400000")
 }
 const unsetSelectedValues = (propertyValue) => {
@@ -130,7 +131,7 @@ const unsetSelectedValues = (propertyValue) => {
 }
 const setTextValue = (id, value) => {
     const element = document.querySelector(id);
-    element.value = value;
+    element.textContentvalue = value;
 }
 const setValue = (id, value) => {
     const element = document.querySelector(id);

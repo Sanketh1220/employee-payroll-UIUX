@@ -217,3 +217,7 @@ error-output {
     color: red;
     margin-left: 12px;
 }
+
+a {
+    text-decoration: none;
+}
