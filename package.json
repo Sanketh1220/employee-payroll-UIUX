@@ -1,11 +1,11 @@
 {
-  "name": "employee-payroll",
+  "name": "employee-payroll-ui",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Sanketh",
+  "author": "",
   "license": "ISC"
 }

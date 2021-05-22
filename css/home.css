@@ -5,7 +5,7 @@ html body {
 
 .header {
     padding: 15px 0;
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
 .header-content {
@@ -29,10 +29,10 @@ html body {
 }
 
 .emp-text {
-    font: nornal normal bold 28px/25px Montserrat;
+    font: normal normal bold 20px/25px Montserrat;
     font-family: "Montserrat", sans-serif;
     letter-spacing: 0px;
-    color: #82a78c;
+    color: #82a70c;
     text-transform: capitalize;
 }
 
@@ -44,11 +44,23 @@ html body {
     box-sizing: border-box;
 }
 
-/* UC 2*/
+.add-button {
+    font: normal normal normal 22px/29px Roboto;
+    letter-spacing: 0px;
+    color: #fff;
+    opacity: 1;
+    background: #82a70c 0% 0% no-repeat padding-box;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 18px;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 .main-content {
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - 80px);
     background-color: #f7f7f7;
     padding: 30px 0 10px;
     box-sizing: border-box;
@@ -83,20 +95,6 @@ html body {
     display: inline-block;
 }
 
-.add-button {
-    font: normal normal normal 22px/29px Roboto;
-    letter-spacing: 0px;
-    color: #ffffff;
-    opacity: 1;
-    background: #82a70c 0% 0% no-repeat padding-box;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 18px;
-    outline: none;
-    cursor: pointer;
-    text-decoration: none;
-}
-
 .table-main {
     width: 80%;
     margin: 0 auto;
@@ -111,8 +109,7 @@ html body {
     min-width: 800px;
 }
 
-td,
-th {
+td, th {
     text-align: left;
     padding: 5px 8px;
 }
@@ -120,7 +117,7 @@ th {
 th {
     background: #42515F 0% 0% no-repeat padding-box;
     border-radius: 3px 3px 0px 0px;
-    text-align: center;
+    text-align: left;
     font: normal normal mediun 18px/24px Roboto;
     letter-spacing: 0px;
     color: #FFFFFF;
@@ -138,7 +135,6 @@ tr:not(:first-child) {
 td {
     font: normal normal nornal 14px/21px Roboto;
     letter-spacing: 0px;
-    text-align: center;
     color: #3d3d3d;
     opacity: 1;
 }
@@ -166,17 +162,4 @@ td img {
     display: inline-block;
     font-weight: 300;
     margin-bottom: 8px;
-}
-
-/* classes and styles added */
-.table-icon-delete {
-    padding-right: 10px;
-    height: 30px;
-    width: 35px;
-}
-
-.table-icon-edit {
-    padding-left: 10px;
-    height: 30px;
-    width: 35px;
 }
